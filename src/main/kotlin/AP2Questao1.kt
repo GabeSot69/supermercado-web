@@ -1,4 +1,3 @@
-
 class AP2Questao1 {
     companion object {
         fun main(args: Array<String>) {
@@ -7,8 +6,8 @@ class AP2Questao1 {
             val itensEstoque = estoque.getItens()
 
             println("###### ESTOQUE ######")
-            println("CÓD NOME             GENERO        MARCA       PREÇO   VALIDADE   VÁLIDO?")
-            println("--- ------------- ------------- --------- ------- ---------- -------")
+            println("CÓD   NOME               GENERO           MARCA        PREÇO          VALIDADE      VÁLIDO?")
+            println("--- * ---------------- * -------------- * ---------- * ------------ * ----------- * -------- * ---")
 
             for (item in itensEstoque) {
                 val codigo = item.getCodigo()
@@ -18,10 +17,10 @@ class AP2Questao1 {
                 val genero = produto.getGenero().getNomeGenero()
                 val preco = String.format("R\$%.2f", produto.getPreco())
                 val dataValidade = item.getValidade().toString()
-                val valido = if (item.valido()) "sim" else "não" // Aleatório
+                val valido = if (item.valido()) "sim" else "não"
 
                 val linha = String.format(
-                    "%3d %-13s %-13s %-10s %7s %10s %7s",
+                    "%3d   %-18s %-16s %-9s %15s %12s %7s",
                     codigo,
                     nome,
                     genero,
@@ -30,7 +29,6 @@ class AP2Questao1 {
                     dataValidade,
                     valido
                 )
-
                 println(linha)
             }
 

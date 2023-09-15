@@ -1,4 +1,3 @@
-import java.text.SimpleDateFormat
 import java.util.*
 
 class AFQuestao2 {
@@ -39,7 +38,7 @@ class AFQuestao2 {
                     val valido = if (item.valido()) "sim" else "não"
 
                     val linha = String.format(
-                        "%3d %-13s %-13s %-10s %7s %10s %7s",
+                        "%3d %-17s %-13s %-10s %7s %10s %7s",
                         codigo,
                         nome,
                         genero,
@@ -55,8 +54,8 @@ class AFQuestao2 {
             }
 
             println("###### ESTOQUE ######")
-            println("CÓD NOME             GENERO        MARCA       PREÇO   VALIDADE   VÁLIDO?")
-            println("--- ------------- ------------- --------- ------- ---------- -------")
+            println("CÓD NOME              GENERO        MARCA      PREÇO   VALIDADE   VÁLIDO?")
+            println("--- ----------------- ------------- ---------- ------- ---------- -------")
 
             for(item in lista){
                 println(item)

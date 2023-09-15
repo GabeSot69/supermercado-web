@@ -53,7 +53,12 @@ class AFQuestao5 {
         println("Total de itens no estoque: ${itens.size}")
 
         for (item in itens) {
-            println("Código: ${item.getCodigo()}, Produto: ${item.getProduto().getNome()}, Preço: R\$ ${item.getProduto().getPreco()}, Data de Validade: ${item.getValidade()}")
+            println(
+                "Código: ${item.getCodigo()}, " +
+                        "Produto: ${item.getProduto().getNome()}, " +
+                        "Preço: R\$ ${String.format("R\$%.2f", item.getProduto().getPreco())}, " +
+                        "Data de Validade: ${item.getValidade()}"
+            )
         }
     }
 
@@ -61,7 +66,11 @@ class AFQuestao5 {
         val itens = carrinho.getItens()
         println("Total de itens no carrinho: ${itens.size}")
         for (item in itens) {
-            println("Código: ${item.getCodigo()}, Produto: ${item.getProduto().getNome()}, Preço: R\$ ${item.getProduto().getPreco()}, Data de Validade: ${item.getValidade()}")
+            println(
+                "Código: ${item.getCodigo()}, " +
+                        "Produto: ${item.getProduto().getNome()}, " +
+                        "Preço: R\$ ${String.format("R\$%.2f", item.getProduto().getPreco())}, " +
+                        "Data de Validade: ${item.getValidade()}")
         }
     }
 }

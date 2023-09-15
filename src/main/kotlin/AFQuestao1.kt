@@ -1,7 +1,9 @@
+import java.util.Scanner
+
 class AFQuestao1 {
     companion object {
         fun main() {
-            val scanner  = Scanner(System.`in`)
+            val scanner = Scanner(System.`in`)
             val supermercadoSPW = SupermercadoWeb()
             val estoque = supermercadoSPW.getEstoque()
             val genero: String
@@ -14,7 +16,7 @@ class AFQuestao1 {
            val generoEscolhido = if (genero.equals("Leite")) Leite() else if (genero.equals("Presunto")) Presunto() else Achocolatado()
 
             println("###### ESTOQUE ######")
-            println("CÓD NOME             GENERO        MARCA       PREÇO   VALIDADE   VÁLIDO?")
+            println("CÓD NOME          GENERO        MARCA       PREÇO   VALIDADE   VÁLIDO?")
             println("--- ------------- ------------- --------- ------- ---------- -------")
 
             for (item in estoque.getItens(generoEscolhido)) {
