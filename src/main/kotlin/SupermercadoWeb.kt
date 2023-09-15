@@ -3,6 +3,8 @@ import kotlin.random.Random
 class SupermercadoWeb {
     private lateinit var estoque: Estoque
     private lateinit var carrinho: Carrinho
+    private lateinit var carrinhoA: Carrinho
+    private lateinit var carrinhoB: Carrinho
     private lateinit var generos: List<Genero>
     private lateinit var marcas: List<Marca>
     private lateinit var produtos: List<Produto>
@@ -14,6 +16,8 @@ class SupermercadoWeb {
     private fun iniciaSupermercado(){
         this.estoque = Estoque()
         this.carrinho = Carrinho()
+        this.carrinhoA = Carrinho()
+        this.carrinhoB = Carrinho()
         this.generos = listOf(
             Leite(),
             Achocolatado(),
@@ -105,6 +109,14 @@ class SupermercadoWeb {
     }
 
     fun getCarrinho(): Carrinho {
+        return carrinho
+    }
+
+    fun getCarrinhoA(): Carrinho {
+        return carrinho
+    }
+
+    fun getCarrinhoB(): Carrinho {
         return carrinho
     }
 }

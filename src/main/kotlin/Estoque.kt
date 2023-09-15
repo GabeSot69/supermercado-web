@@ -18,15 +18,15 @@ class Estoque {
     }
 
     fun getItens(marca: Marca): List<ItemProduto> {
-        return itens.filter { it.getProduto().getMarca() == marca }
+        return itens.filter { it.getProduto().getMarca().getNome() == marca.getNome() }
     }
 
     fun getItens(produto: Produto): List<ItemProduto> {
-        return itens.filter { it.getProduto() == produto }
+        return itens.filter { it.getProduto().getNome() == produto.getNome() }
     }
 
     fun getItens(genero: Genero): List<ItemProduto> {
-        return itens.filter { it.getProduto().getGenero() == genero }
+        return itens.filter { it.getProduto().getGenero().getNomeGenero() == genero.getNomeGenero() }
     }
 
     fun qtdItens(): Long {
